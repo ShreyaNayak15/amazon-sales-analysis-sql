@@ -13,7 +13,34 @@ The primary objective of this project is to analyze transactional sales data to 
 The data for this project is sourced from from Kaggle Dataset:
 - **Dataset Link:** [https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data]
 
-  
+## Schema
+CREATE TABLE amazon_sales (
+    index               SERIAL PRIMARY KEY,
+    order_id            VARCHAR(50),
+    date                DATE,
+    status              VARCHAR(100),
+    fulfilment          VARCHAR(50),
+    sales_channel       VARCHAR(50),
+    ship_service_level  VARCHAR(50),
+    style               VARCHAR(100),
+    sku                 VARCHAR(100),
+    category            VARCHAR(100),
+    size                VARCHAR(50),
+    asin                VARCHAR(20),
+    courier_status      VARCHAR(100),
+    qty                 INT,
+    currency            VARCHAR(10),
+    amount              NUMERIC(10,2),
+    ship_city           VARCHAR(100),
+    ship_state          VARCHAR(100),
+    ship_postal_code    VARCHAR(20),
+    ship_country        VARCHAR(10),
+    promotion_ids       TEXT,
+    b2b                 BOOLEAN,
+    fulfilled_by        VARCHAR(50)
+);
+
+
 ## Business Problems Explored
 The analysis was structured to answer several key business questions:
 
