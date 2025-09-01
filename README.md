@@ -14,6 +14,7 @@ The data for this project is sourced from from Kaggle Dataset:
 - **Dataset Link:** [https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data]
 
 ## Schema
+```sql
 CREATE TABLE amazon_sales (
     index               SERIAL PRIMARY KEY,
     order_id            VARCHAR(50),
@@ -39,7 +40,7 @@ CREATE TABLE amazon_sales (
     b2b                 BOOLEAN,
     fulfilled_by        VARCHAR(50)
 );
-
+```
 
 ## Business Problems Explored
 The analysis was structured to answer several key business questions:
