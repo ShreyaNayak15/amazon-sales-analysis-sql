@@ -142,7 +142,8 @@ SELECT * FROM products;
 SELECT * FROM orders;
 ```
 
-- 1: Top 10 States by Sales Revenue ,
+- 1: Top 10 States by Sales Revenue
+  
     Identifies the most valuable regions, helping to prioritize logistics and marketing.
 ```sql
 SELECT ship_state,round(SUM(amount),2) AS revenue
@@ -154,6 +155,7 @@ LIMIT 10
 ```
 
 - 2: Top 5 Best-Selling Product Categories
+  
      Helps the business understand consumer demand and manage inventory for popular units
 ```sql
 SELECT p.category,
@@ -169,6 +171,7 @@ LIMIT 5;
 ```
 
 - 3.Sales Comparison: B2B vs. B2C
+  
     This analysis can inform different marketing strategies for business clients versus individual customers.
 ```sql
 SELECT customer_type,
@@ -180,6 +183,7 @@ GROUP BY customer_type;
 ```
 
 - 4.Order Status Breakdown
+  
     Understanding the cancellation rate is crucial for identifying potential issues in the supply chain or with product availability.
 ```sql
 SELECT status,
@@ -191,6 +195,7 @@ ORDER BY number_of_orders DESC;
 ```
 
 - 5: What is the monthly sales growth?
+  
      This helps to understand sales trends over time, identify seasonal peaks (like festivals),and measure overall business performance month-over-month.
 ```sql
 SELECT to_char(order_date, 'YYYY-MM') as sales_month,
@@ -203,6 +208,7 @@ ORDER BY 1;
 ```
 
 - 6: For the top-selling category, what are the most popular sizes?
+  
     This is crucial for inventory management. If you know that "Set" is the top category, you need to know whether to stock more "M" (Medium) or "XXL" sizes to meet demand and avoid overstocking unpopular sizes.
 ```sql
 SELECT p.size as size,count(o.order_id) AS num_of_orders
@@ -214,6 +220,7 @@ ORDER BY 2 DESC;
 ```
 
 - 7: Who are the top 5 cities within the top-performing state?
+  
     This allows for more targeted marketing. Instead of a statewide campaign in Maharashtra, you could focus your budget on the top 5 cities like Mumbai, Pune, etc., where you have the most customers.
 ```sql
 SELECT DISTINCT ship_city from orders
