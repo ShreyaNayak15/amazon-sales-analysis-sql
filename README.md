@@ -46,7 +46,7 @@ CREATE TABLE amazon_sales (
 
 SELECT COUNT(*) FROM amazon_sales;   -- Count of Rows = 128975
 
-** Handling null values
+**Handling null values**
 ```sql
 SELECT COUNT(*)
 FROM amazon_sales
@@ -59,7 +59,7 @@ WHERE amount IS NOT NULL AND sku IS NOT NULL;
 SELECT COUNT(*) FROM amazon_clean;
 ```
 
- ### Removing Duplicates
+ **Removing Duplicates**
 ```sql
 WITH cte AS
 (SELECT ctid,*, ROW_NUMBER() OVER(PARTITION BY "order_id","sku" ORDER BY "date") AS row_num
@@ -68,7 +68,7 @@ DELETE FROM amazon_clean
 where ctid in (SELECT ctid FROM cte WHERE row_num > 1);
 ```
 
-### Standardizing Categorical Data
+**Standardizing Categorical Data**
 ```sql
 SELECT DISTINCT ship_state FROM amazon_clean WHERE ship_state IS NOT NULL;
 
