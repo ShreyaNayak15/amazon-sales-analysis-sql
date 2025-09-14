@@ -279,3 +279,6 @@ By implementing these data-driven strategies, the business can enhance its marke
 
 #### THANK YOU!
 
+#### Shreya Nayak
+**Linkedin:** [https://www.linkedin.com/in/shreyanayak15]
+**Email:** [shreyanayak1505@gmail.com]
