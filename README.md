@@ -277,4 +277,5 @@ Plan for Seasonality: Prepare for the annual sales peak in April by increasing s
 
 By implementing these data-driven strategies, the business can enhance its marketing ROI, improve inventory management, and foster growth in its most valuable customer segments.
 
-### THANK YOU!
+#### THANK YOU!
+
